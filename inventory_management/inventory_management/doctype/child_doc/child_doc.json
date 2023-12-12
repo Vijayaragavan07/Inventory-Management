@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-06 17:38:50.660876",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "product_name",
+  "stock_quantity",
+  "price",
+  "hsn",
+  "uom",
+  "out_quantity"
+ ],
+ "fields": [
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Product Name",
+   "options": "Products Availability",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "product_name.price",
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price"
+  },
+  {
+   "fetch_from": "product_name.hsn",
+   "fieldname": "hsn",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "HSN"
+  },
+  {
+   "fetch_from": "product_name.uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fetch_from": "product_name.quantity",
+   "fieldname": "stock_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Stock Quantity"
+  },
+  {
+   "fieldname": "out_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Out Quantity",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-08 12:11:43.250161",
+ "modified_by": "Administrator",
+ "module": "Inventory Management",
+ "name": "Child doc",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

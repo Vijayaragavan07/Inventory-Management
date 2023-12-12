@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-07 16:42:54.411483",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "product_name",
+  "stock_quantity",
+  "order_quantity",
+  "order_date",
+  "price"
+ ],
+ "fields": [
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Product Name",
+   "options": "Products Availability",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "product_name.quantity",
+   "fieldname": "stock_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Stock Quantity"
+  },
+  {
+   "fieldname": "order_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Order Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "order_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Order Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "product_name.price",
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-08 12:11:43.379155",
+ "modified_by": "Administrator",
+ "module": "Inventory Management",
+ "name": "Child doc2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

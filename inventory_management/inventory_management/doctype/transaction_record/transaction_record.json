@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{product_name}-{transaction_date}",
+ "creation": "2023-12-07 12:28:35.685502",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "product_name",
+  "transaction_type",
+  "transaction_name",
+  "transaction_date",
+  "company_name",
+  "party_name",
+  "selled_price",
+  "amount_status",
+  "selled_quantity",
+  "purchased_quantity",
+  "purchased_price",
+  "amount",
+  "due_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "selled_price",
+   "fieldtype": "Currency",
+   "label": "Sold Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "amount_status",
+   "fieldtype": "Select",
+   "label": "Amount Status",
+   "options": "Pending\nReceived"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transaction Type",
+   "options": "Selling Invoice\nPurchased Invoice"
+  },
+  {
+   "fieldname": "transaction_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Transaction Name",
+   "options": "transaction_type"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "purchased_quantity",
+   "fieldtype": "Float",
+   "label": "Purchased Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "purchased_price",
+   "fieldtype": "Currency",
+   "label": "Purchased Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Select",
+   "label": "Party Name",
+   "options": "Customer\nSupplier"
+  },
+  {
+   "fieldname": "selled_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Sold Quantity"
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Datetime",
+   "label": "Transaction Date",
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2023-12-12 13:02:33.419954",
+ "modified_by": "Administrator",
+ "module": "Inventory Management",
+ "name": "Transaction Record",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
